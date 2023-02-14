@@ -9,7 +9,7 @@ That's a lexycal exercise, to be an actual language it would need a parser, comp
 |if|is|?|
 |else if|then is|??|
 |else|then|...|
-|for|do in|i...itemName|
+|for|do in||
 |while|keep as|
 |switch|what|itemName:|
 |return|give|
