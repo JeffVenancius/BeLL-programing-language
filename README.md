@@ -5,10 +5,15 @@ That's a lexycal exercise, to be an actual language it would need a parser, comp
 
 |Instead of|use this|or this|
 |---|---|---|
-|function|HowTo
-|if|isIt|?|
-|else if|then isIt|??|
+|function|howTo
+|if|is|?|
+|else if|then is|??|
 |else|then|...|
 |for|do in|
 |while|while|
+|switch|what|Aim|
+|return|give|
 |var|var
+
+## Why?
+
