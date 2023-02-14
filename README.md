@@ -15,6 +15,8 @@ That's a lexycal exercise, to be an actual language it would need a parser, comp
 |return|give|
 |var|item
 |const|const
+|class|kind
+|object|being
 
 ## Philosophy
 You are the wheelman. You do not say what to do, you do.
