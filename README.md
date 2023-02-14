@@ -37,4 +37,27 @@ You are the computer, take the passive aproach and prioritize an active one.
 - ... - He gave up.
 - itemName: - That's it, I believe you don't need to actually say it is a switch statement as long as it looks like a duck, if you know what I mean (duck typing is what I mean).
 
+## Typing
+
+This language is dinamically typed with optional static typing but, if you gonna static type your "items" and "howTos", you better do it all the way: with ranges.
+
+Let's declare a item:
+```
+# this is a comment, by the way
+item foo =  10 # dinamically
+item foo2 := 10 # fixed, but let the "compiler" define  what it's gonna be.
+item foo3 : number(INT) = 10 # normally fixed, you can use all the datatypes from c++, but do it in all caps as they are actually constant values.
+item foo4 : number([0,10]) = 10 # with a range
+```
+Now with text:
+```
+item foo = "text"
+item foo2 : text(STR) = "text"
+item foo3 : text([0, 126]) = "text" # range based on the ANSI table, which is to say that I'll only use ASCII here
+item foo4 : text([[65,126]) = "text" # or maybe I just want to use A to ~, you know.
+```
+I'm basing all this is gdcript and python, as you might have guessed.
+
+The thing is though, if you can define so easily the range in memory you're gonna need, than you can save a lot of space if you implement it right.
+
 As I've said, this is just a lexycal exercise, it's not better or worse than any other language - after all, it's not a language at all, and even at that it doesn't have all the basics.
