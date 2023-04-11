@@ -13,47 +13,182 @@ Think like a human, a human computer.
 
 Or, as we say, "hello world".
 ```
+(this is a comment)
+
+(
+this
+is
+also
+a
+comment () still not done
+) (now I'm done)
+
 (parenthesis are comments, as we do when writing other stuff. 
 howTo is the keyword you'll use to define a function, as you
 tell yourself how to do stuff. I'll keep calling them functions
 just so it'll be easier to explain.)
 
 howTo start: (start is the first thing a program do.)
-- write with "hello world". (you usually use () to call a function and pass arguments.
-                             Here instead, you'll use "with" to call them and a end stop 
-                             to "close" it.
-                             Instead of tabs or spaces, indentation is made with hyphens.
-                             the last one needs a space.
-                             Am I reinventing the wheel? Yeah, but this is just an exercise.
-                             Do I have reasons to do so? Yeah, but it doesn't matter.
-                             As long you don't really close the parenthesis, everything after 
-                             will be considered as it.
-                             Comments are smart, though, so it respects the idea that every opened 
-                             parenthesis should have a closed one.
-                             )
-- foo.                      (notice it that to call a function without args you'll just need a dot)
+- write with "hello world". (you know what this is?
+                             a comment.)
 
-howTo foo:
-- write with "bar rel roll"
-- passAFunctionAsAArgument with oneMore with "one more"..
-
-howTo  passAFunctionAsAArgument with arg:
-- write with parameter.
-
-howTo oneMore with arg:
-- give arg (give is like the return keyword)
-
-howTo StaticTypeThings with int//integerType: (/ is used as a way to put the variable into an umbrela.
-                                               // means typyng a variable, /  is.like.that
-                                               or as we're gonna say it here: is/like/that
-                                               )
-- item foo: 'nothing'
-- item str//bar: 'still nothing, but statically typed.'
-- ignore (ignore doesn't do anything.)
 
 ```
+Use the keyword howTo to define a function. It makes sense, right? You're telling how to do it.
+Which howTo did I've called? I've called the howTo write. Did I've passed some argument? Yes.
 
-### Ignore this for now, they're just ideas.
+The keyword with serves this purpose. it's not very short, but it is more lexycal. How the computer knows I'm done? With a final point, of course.
+
+## You'll gonna mess the dot notation!
+
+No I won't. You know why? Because you won't need it.
+Instead, all you have to do to access properties inside properties is use a //
+
+```
+like//this
+```
+See? It's doable.
+
+## To quack or not to quack. That is the question.
+
+The first language I've learned was GDScript. I'll allways have a place in my heart for it.
+That is to say, you can statically type a variable, function or whatever here. If you want to.
+
+```
+item foo: 'foo'
+item str/foo: 'foo' (See? That's why you need two slashes when accessing properties. one slash means you're typing it.)
+remember str/OCTOBER: 'THIRD' (this is a constant, by the way)
+
+howTo a_static_function: /str
+- give "a string." (give means return. Again, it's more human that way.)
+
+```
+Notice that I've 'changed' the word var/let to item. It's more human that way and I really want to reinventing the wheel.
+
+It doesn't matter, this language is fake.
+
+## Ooops, I've did it again.
+
+Look, I understand the with thing and all, but won't it get confused when passing "functions" inside "functions"?
+
+Maybe, maybe not.
+
+```
+do_a_thing with this_function with 'a string'..
+
+howTo do_a_thing with foo:
+- write with value.
+
+howTo this_function str/bar: /str
+- give bar
+
+howTo disappear_completelly:
+- ignore
+
+```
+Yep, each with asks for a dot. 
+
+You can't escape symbolic hell here either.
+
+## Kiss the cook
+You might noticed the weird identation.
+
+Again, it is to be more human readable. just use hyphens instead of tabs or spaces, the the last hyphen should follow a space, but it's not necessary (although none of this is necessary, to be fair.)
+
+Think of it as a grocery list, and you'll gonna be cooking some stuff.
+
+## What if the wheel were squared?
+
+Yep, the bones are almost there. So let me do some stuff.
+
+### what if?
+Here are some ways to write if/else statements:
+```
+(First way)
+
+is duck a bird? (is is equal to if, a is equal to ==)
+- write with "duck is a bird.".
+then is duck a whale? (then is not exactly equal to else, but it's the same spirit)
+- write with "then how can they fly?".
+well then: (well is equal to I don't know what else to do man is there something I could do with this?)
+- write "What is life?".
+
+(Second way)
+duck is a bird:
+- ?
+-- write with "duck is a bird.".
+- ?? duck is a whale:
+-- write with "then how can they fly?".
+- ...
+-- write "What is life?".
+```
+
+### Face/Off
+A switch statement:
+
+```
+item phrase
+
+what is duck:
+- bird?
+-- phrase: "duck is a bird"
+- whale?
+-- phrase: "then how can they fly?"
+- airplane? mermaid? cat?
+-- phrase: "This duck is kinda weird."
+- animal?
+-- phrase += "animal it is, but what kind?" (need to find something to replace +=, you know, more human readable)
+-- keep going (don't need to break all the time, based on GDScript)
+- swan?
+-- phrase += "A swan? That's why they bullied my boy!!"
+- whatever: (whatever is a wild card)
+-- phrase: "I don't know what else to do!"
+
+write with phrase.
+
+```
+## Qu'est-ce que c'est? 
+Talking about loops now.
+
+### For for for for for for for for for for better
+There are many ways to do a for loop, they're a gourmetized while one, after all. Here are some I've thought:
+
+```
+item arr: ['this', 'is', 'something']
+
+do in arr//size:
+- write with 'this will repeat 3 times'.
+
+do in arr//size as index_number:
+- write with index_number. (0, 1, 2)
+
+do in arr as arr_value:
+- write with arr_value. (arr_value will be the arr[index] each time)
+
+from 4 to 6 do as i:
+- write with i. (4, 5, 6)
+```
+
+### while I'm still here
+And this is the while like way of doing:
+
+```
+item duck
+item duck_age: 0
+
+as long duck is not a bird:
+- ask_if_he_is_a_swan.
+
+howTo ask_if_he_is_a_swan:
+- duck_age += 1
+- is duck_age > 2?
+-- duck is a swan
+```
+
+
+This is not done yet, but maybe you've noticed it turns out to be very funny to me. I do think it's doable.
+
+#### Ignore this for now, they're just ideas.
 
 |Instead of|use this|or this|
 |---|---|---|
@@ -66,7 +201,7 @@ howTo StaticTypeThings with int//integerType: (/ is used as a way to put the var
 |switch|what|itemName:|
 |return|give|
 |var|item
-|const|const
+|const|remember
 |class|kind
 |object|being
 |(|with
