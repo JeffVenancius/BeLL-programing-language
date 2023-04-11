@@ -5,8 +5,13 @@ That's a lexycal exercise, to be an actual language it would need a parser, comp
 
 ## Philosophy
 You are the wheelman. You do not say what to do, you do.
+
 You are the computer, take the passive aproach and prioritize an active one.
-This is a language, it comunicates and, as such, tries to get closer to the human logic.
+
+This is a language, it comunicates with the most human readable aproach I can get.
+
+If you can comunicate better, than you can think better as well.
+
 Think like a human, a human computer.
 
 ## Do a barrel roll
