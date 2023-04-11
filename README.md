@@ -13,8 +13,12 @@ Think like a human, a human computer.
 
 Or, as we say, "hello world".
 ```
-howTo start: (parenthesis are comments, as we do when writing other stuff. howTo is  the keyword you'll use to define a function, as you tell yourself ho to do stuff.)
-  write with "hello world"
+(parenthesis are comments, as we do when writing other stuff. 
+howTo is  the keyword you'll use to define a function, as you
+tell yourself ho to do stuff.)
+
+howTo start: 
+  write with "hello world". (you usually use () to call a function and to pass arguments. Here instead, you'll use "with" to call them and a end stop to "close" it. Just use aspace after and you'll be good to go. )
 ```
 
 ### Ignore this for now, they're just ideas.
