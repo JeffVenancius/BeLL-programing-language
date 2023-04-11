@@ -3,6 +3,22 @@ A fake programing language.
 
 That's a lexycal exercise, to be an actual language it would need a parser, compiler, etc...
 
+## Philosophy
+You are the wheelman. You do not say what to do, you do.
+You are the computer, take the passive aproach and prioritize an active one.
+This is a language, it comunicates and, as such, tries to get closer to the human logic.
+Think like a human, a human computer.
+
+## Do a barrel roll
+
+Or, as we say, "hello world".
+```
+howTo start: (parenthesis are comments, as we do when writing other stuff. howTo is  the keyword you'll use to define a function, as you tell yourself ho to do stuff.)
+  write with "hello world"
+```
+
+### Ignore this for now, they're just ideas.
+
 |Instead of|use this|or this|
 |---|---|---|
 |function|howTo
@@ -20,11 +36,7 @@ That's a lexycal exercise, to be an actual language it would need a parser, comp
 |(|with
 |)|.
 
-## Philosophy
-You are the wheelman. You do not say what to do, you do.
-You are the computer, take the passive aproach and prioritize an active one.
-This is a language, it comunicates and, as such, tries to get closer to the human logic.
-Think like a human, a human computer.
+
 
 ## About "use this"
 
