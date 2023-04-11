@@ -14,11 +14,43 @@ Think like a human, a human computer.
 Or, as we say, "hello world".
 ```
 (parenthesis are comments, as we do when writing other stuff. 
-howTo is  the keyword you'll use to define a function, as you
-tell yourself ho to do stuff.)
+howTo is the keyword you'll use to define a function, as you
+tell yourself how to do stuff. I'll keep calling them functions
+just so it'll be easier to explain.)
 
-howTo start: 
-  write with "hello world". (you usually use () to call a function and to pass arguments. Here instead, you'll use "with" to call them and a end stop to "close" it. Just use aspace after and you'll be good to go. )
+howTo start: (start is the first thing a program do.)
+- write with "hello world". (you usually use () to call a function and pass arguments.
+                             Here instead, you'll use "with" to call them and a end stop 
+                             to "close" it.
+                             Instead of tabs or spaces, indentation is made with hyphens.
+                             the last one needs a space.
+                             Am I reinventing the wheel? Yeah, but this is just an exercise.
+                             Do I have reasons to do so? Yeah, but it doesn't matter.
+                             As long you don't really close the parenthesis, everything after 
+                             will be considered as it.
+                             Comments are smart, though, so it respects the idea that every opened 
+                             parenthesis should have a closed one.
+                             )
+- foo.                      (notice it that to call a function without args you'll just need a dot)
+
+howTo foo:
+- write with "bar rel roll"
+- passAFunctionAsAArgument with oneMore with "one more"..
+
+howTo  passAFunctionAsAArgument with arg:
+- write with parameter.
+
+howTo oneMore with arg:
+- give arg (give is like the return keyword)
+
+howTo StaticTypeThings with int//integerType: (/ is used as a way to put the variable into an umbrela.
+                                               // means typyng a variable, /  is.like.that
+                                               or as we're gonna say it here: is/like/that
+                                               )
+- item foo: 'nothing'
+- item str//bar: 'still nothing, but statically typed.'
+- ignore (ignore doesn't do anything.)
+
 ```
 
 ### Ignore this for now, they're just ideas.
@@ -30,7 +62,7 @@ howTo start:
 |else if|then is|??|
 |else|then|...|
 |for|do in||
-|while|keep as|
+|while|keep as|as long as|
 |switch|what|itemName:|
 |return|give|
 |var|item
