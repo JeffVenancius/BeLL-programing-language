@@ -17,10 +17,14 @@ That's a lexycal exercise, to be an actual language it would need a parser, comp
 |const|const
 |class|kind
 |object|being
+|(|with
+|)|.
 
 ## Philosophy
 You are the wheelman. You do not say what to do, you do.
 You are the computer, take the passive aproach and prioritize an active one.
+This is a language, it comunicates and, as such, tries to get closer to the human logic.
+Think like a human, a human computer.
 
 ## About "use this"
 
