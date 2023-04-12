@@ -25,29 +25,22 @@ this
 is
 also
 a
-comment () still not done
-) (now I'm done)
-
-(parenthesis are comments, as we do when writing other stuff. 
-howTo is the keyword you'll use to define a function, as you
-tell yourself how to do stuff. I'll keep calling them functions
-just so it'll be easier to explain.)
+comment
+)
 
 howTo start: (start is the first thing a program do.)
 - write with "hello world". (you know what this is?
                              a comment.)
-
-
 ```
-Use the keyword howTo to define a function. It makes sense, right? You're telling how to do it.
-Which howTo did I've called? I've called the howTo write. Did I've passed some argument? Yes.
+Use the keyword `howTo` to define a function. It makes sense, right? You're telling how to do it.
+Which `howTo` did I've called? I've called the `howTo write`. Did I've passed some argument? Yes.
 
-The keyword with serves this purpose. it's not very short, but it is more lexycal. How the computer knows I'm done? With a final point, of course.
+The keyword `with` serves this purpose. it's not very short, but it is more lexycal. How the computer knows I'm done? With a final point, of course.
 
 ## You'll gonna mess the dot notation!
 
 No I won't. You know why? Because you won't need it.
-Instead, all you have to do to access properties inside properties is use a //
+Instead, all you have to do to access properties inside properties is use a `//`
 
 ```
 like//this
@@ -57,24 +50,20 @@ See? It's doable.
 ## To quack or not to quack. That is the question.
 
 The first language I've learned was GDScript. I'll allways have a place in my heart for it.
-That is to say, you can statically type a variable, function or whatever here. If you want to.
+That is to say, you can statically type a variable, function or whatever here - if you want to.
 
 ```
-item foo: 'foo'
+item foo: 'foo' (item is what you call a variable here)
 item str/foo: 'foo' (See? That's why you need two slashes when accessing properties. one slash means you're typing it.)
-remember str/OCTOBER: 'THIRD' (this is a constant, by the way)
+remember str/OCTOBER: 'THIRD' (remember is how you call a constant)
 
 howTo a_static_function: /str
 - give "a string." (give means return. Again, it's more human that way.)
 
 ```
-Notice that I've 'changed' the word var/let to item. It's more human that way and I really want to reinventing the wheel.
-
-It doesn't matter, this language is fake.
-
 ## Ooops, I've did it again.
 
-Look, I understand the with thing and all, but won't it get confused when passing "functions" inside "functions"?
+> Look, I understand the `with` thing and all, but won't it get confusing when passing functions inside functions?
 
 Maybe, maybe not.
 
@@ -91,16 +80,16 @@ howTo disappear_completelly:
 - ignore
 
 ```
-Yep, each with asks for a dot. 
+Yep, each `with` asks for a `.` 
 
-You can't escape symbolic hell here either.
+You can't escape symbolic hell here either. Sorry.
 
 ## Kiss the cook
 You might noticed the weird identation.
 
-Again, it is to be more human readable. just use hyphens instead of tabs or spaces, the the last hyphen should follow a space, but it's not necessary (although none of this is necessary, to be fair.)
+Again, it is to be more human readable. just use hyphens instead of tabs or spaces, the last hyphen should follow a space, but it's not necessary (although none of this is necessary, to be fair.)
 
-Think of it as a grocery list, and you'll gonna be cooking some stuff.
+Think of it as a grocery list, and you'll gonna cook some stuff.
 
 ## What if the wheel were squared?
 
@@ -108,24 +97,26 @@ Yep, the bones are almost there. So let me do some stuff.
 
 ### what if?
 Here are some ways to write if/else statements:
+
 ```
 (First way)
 
-is duck a bird? (is is equal to if, a is equal to ==)
+is duck a bird? ('is' is equal to if, 'a' is equal to ==)
 - write with "duck is a bird.".
-then is duck a whale? (then is not exactly equal to else, but it's the same spirit)
+then is duck a whale? ('then is' is not exactly equal to 'else', but it's the same spirit, so there you have it, 'else if')
 - write with "then how can they fly?".
-well then: (well is equal to I don't know what else to do man is there something I could do with this?)
+well then: ('well' is just so you can comunicate better, think of it as the machine trying to do all the paths and then say it for itself "well, I'll do this then")
 - write "What is life?".
 
-(Second way)
-duck is a bird:
-- ?
--- write with "duck is a bird.".
-- ?? duck is a whale:
--- write with "then how can they fly?".
-- ...
--- write "What is life?".
+(ternary)
+duck is a bird ? write with "duck is a bird.". ?? duck is a whale ? write with "then how can they fly?".
+
+(ternary multiline)
+duck is a bird
+- ? write with "duck is a bird.".
+- ?? duck is a whale
+- ? write with "then how can they fly?".
+
 ```
 
 ### Face/Off
@@ -142,8 +133,8 @@ what is duck:
 - airplane? mermaid? cat?
 -- phrase: "This duck is kinda weird."
 - animal?
--- phrase += "animal it is, but what kind?" (need to find something to replace +=, you know, more human readable)
--- keep going (don't need to break all the time, based on GDScript)
+-- phrase is and "animal it is, but what kind?" ('is and' means concatenation, always. if you do 'item foo: 1 is and 2' you'll get 12)
+-- keep going ('keep going' is like 'continue', don't need to break all the time, based on GDScript)
 - swan?
 -- phrase += "A swan? That's why they bullied my boy!!"
 - whatever: (whatever is a wild card)
@@ -156,7 +147,7 @@ write with phrase.
 Talking about loops now.
 
 ### For for for for for for for for for for better
-There are many ways to do a for loop, they're a gourmetized while one, after all. Here are some I've thought:
+There are many ways to do a `for` loop, they're a gourmetized `while` statement, after all. Here are some I've thought:
 
 ```
 item arr: ['this', 'is', 'something']
@@ -175,25 +166,106 @@ from 4 to 6 do as i:
 ```
 
 ### while I'm still here
-And this is the while like way of doing:
+And this is the `while` way of doing stuff:
 
 ```
 item duck
 item duck_age: 0
 
-as long duck is not a bird:
+as long duck is not a bird: ('is not' means ! in other languages, 'a', again, is just like ==. Finally, 'as long' is the 'while' per se)
 - ask_if_he_is_a_swan.
 
 howTo ask_if_he_is_a_swan:
-- duck_age += 1
+- duck_age += 1 (math calculations asks for math symbols, no other way around it.)
 - is duck_age > 2?
 -- duck is a swan
+- then is duck_age a 0?
+-- write with "he's ugly in a cute kind of way"
 ```
 
+## Being oriented program
+
+BOP BOP.
+Everything is a being of a kind. Norman is a being of kind Human, BOP BOP.
+
+### Do Right yo!
+Constructor is DNA, Norman is a being of kind human, his DNA is Human. Totally a guy.
+
+Let's teach the machine how to reproduce him.
+
+```
+kind Human
+inherits Animal
+
+- Human with name, surname:.(don't boilerplate. The '.' after the ':' is all you need)
+```
+If the DNA doesn't have a set of rules, it will assume all params should be assigned to their respective items.
+
+If the items are not declared, it will create it as public items If you want to do something in the constructor beyond that, you should call a special function so it will do what is supposed to do AND what you want to do.
+
+This function's name is make_me.
+
+```
+kind Human
+inherits Animal
+
+(this:)
+- Human with name, surname:
+-- make_me.
+
+(is exactly the same as:)
+- Human with name and surname:.
+
+(but you can do more stuff beyond just the ':.')
+
+```
 
 This is not done yet, but maybe you've noticed it turns out to be very funny to me. I do think it's doable.
 
-#### Ignore this for now, they're just ideas.
+Now you can check a table with the substitutions I've made/am making.
+
+## The Table
+if you're coming from any other language, it should be easier to read this. In a world where this language actually exists and is entirely functional, you won't need to.
+
+|standard|substitution 1|
+|---|---|
+|function|howTo|
+|(|with|
+|)|.|
+|return|give|
+|pass|ignore|
+|continue|keep going|
+|break|cut|
+|==|a|
+|(as concatenation) +=|is and|
+|(any operand)=|(any operand)=|
+|var|item|
+|const|remember|
+|if|is|
+|(ternary) ?|?|
+|(ternary) :|??|
+|else if|then is|
+|else|well then|
+|switch|what is|
+|while|as long|
+|do while|cop|
+|for 10|do in 10|
+|for i of var|do in var as i|
+|for i in range(4,10)|from 4 to 10 do as i|
+|object|being|
+|class|kind|
+
+
+
+
+
+
+
+
+
+
+
+<!-- Ignore this for now, they're just ideas.
 
 |Instead of|use this|or this|
 |---|---|---|
