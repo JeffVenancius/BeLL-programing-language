@@ -55,6 +55,8 @@ That is to say, you can statically type a variable, function or whatever here - 
 ```
 item foo: 'foo' (item is what you call a variable here)
 item str/foo: 'foo' (See? That's why you need two slashes when accessing properties. one slash means you're typing it.)
+item str/[a-z]{29}/bar = "range can be defined by regex"
+item int/-?[\d]{1,2}/number = -20 (an integer that is signed and can hold two digits.)
 remember str/OCTOBER: 'THIRD' (remember is how you call a constant)
 
 howTo a_static_function: /str
