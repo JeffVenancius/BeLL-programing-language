@@ -18,19 +18,19 @@ Think like a human, a human computer.
 
 Or, as we say, "hello world".
 ```
-(this is a comment)
+((this is a comment))
 
-(
+((
 this
 is
 also
 a
 comment
-)
+))
 
-howTo start: (start is the first thing a program do.)
-- write with "hello world". (you know what this is?
-                             a comment.)
+howTo start: ((start is the first thing a program do.))
+- write with "hello world". ((you know what this is?
+                             a comment.))
 ```
 Use the keyword `howTo` to define a function. It makes sense, right? You're telling how to do it.
 Which `howTo` did I've called? I've called the `howTo write`. Did I've passed some argument? Yes.
@@ -53,14 +53,14 @@ The first language I've learned was GDScript. I'll allways have a place in my he
 That is to say, you can statically type a variable, function or whatever here - if you want to.
 
 ```
-item foo: 'foo' (item is what you call a variable here)
-item str/foo: 'foo' (See? That's why you need two slashes when accessing properties. one slash means you're typing it.)
+item foo: 'foo' ((item is what you call a variable here))
+item str/foo: 'foo' ((See? That's why you need two slashes when accessing properties. one slash means you're typing it.))
 item str/[a-z]{29}/bar = "range can be defined by regex"
-item int/-?[\d]{1,2}/number = -20 (an integer that is signed and can hold two digits.)
-remember str/OCTOBER: 'THIRD' (remember is how you call a constant)
+item int/-?[\d]{1,2}/number = -20 ((an integer that is signed and can hold two digits.))
+remember str/OCTOBER: 'THIRD' ((remember is how you call a constant))
 
 howTo a_static_function: /str
-- give "a string." (give means return. Again, it's more human that way.)
+- give "a string." ((give means return. Again, it's more human that way.))
 
 ```
 ## Ooops, I've did it again.
@@ -86,7 +86,7 @@ Yep, each `with` asks for a `.`
 
 You can't escape symbolic hell here either. Sorry.
 
-## Kiss the cook
+## KISS the cook
 You might noticed the weird identation.
 
 Again, it is to be more human readable. just use hyphens instead of tabs or spaces, the last hyphen should follow a space, but it's not necessary (although none of this is necessary, to be fair.)
@@ -101,19 +101,19 @@ Yep, the bones are almost there. So let me do some stuff.
 Here are some ways to write if/else statements:
 
 ```
-(First way)
+((First way))
 
-is duck a bird? ('is' is equal to if, 'a' is equal to ==)
+is duck a bird? (('is' is equal to if, 'a' is equal to ==))
 - write with "duck is a bird.".
-then is duck a whale? ('then is' is not exactly equal to 'else', but it's the same spirit, so there you have it, 'else if')
+then is duck a whale? (('then is' is not exactly equal to 'else', but it's the same spirit, so there you have it, 'else if'))
 - write with "then how can they fly?".
-well then: ('well' is just so you can comunicate better, think of it as the machine trying to do all the paths and then say it for itself "well, I'll do this then")
+well then: (('well' is just so you can comunicate better, think of it as the machine trying to do all the paths and then say it for itself "well, I'll do this then"))
 - write "What is life?".
 
-(ternary)
+((ternary))
 duck is a bird ? write with "duck is a bird.". ?? duck is a whale ? write with "then how can they fly?".
 
-(ternary multiline)
+((ternary multiline))
 duck is a bird
 - ? write with "duck is a bird.".
 - ?? duck is a whale
@@ -135,11 +135,11 @@ what is duck:
 - airplane? mermaid? cat?
 -- phrase: "This duck is kinda weird."
 - animal?
--- phrase is and "animal it is, but what kind?" ('is and' means concatenation, always. if you do 'item foo: 1 is and 2' you'll get 12)
--- keep going ('keep going' is like 'continue', don't need to break all the time, based on GDScript)
+-- phrase is and "animal it is, but what kind?" (('is and' means concatenation, always. if you do 'item foo: 1 is and 2' you'll get 12))
+-- keep going (('keep going' is like 'continue', don't need to break all the time, based on GDScript))
 - swan?
 -- phrase += "A swan? That's why they bullied my boy!!"
-- whatever: (whatever is a wild card)
+- whatever: ((whatever is a wild card))
 -- phrase: "I don't know what else to do!"
 
 write with phrase.
@@ -158,13 +158,13 @@ do in arr//size:
 - write with 'this will repeat 3 times'.
 
 do in arr//size as index_number:
-- write with index_number. (0, 1, 2)
+- write with index_number. ((0, 1, 2))
 
 do in arr as arr_value:
-- write with arr_value. (arr_value will be the arr[index] each time)
+- write with arr_value. ((arr_value will be the arr[index] each time))
 
 from 4 to 6 do as i:
-- write with i. (4, 5, 6)
+- write with i. ((4, 5, 6))
 ```
 
 ### while I'm still here
@@ -174,11 +174,11 @@ And this is the `while` way of doing stuff:
 item duck
 item duck_age: 0
 
-as long duck is not a bird: ('is not' means ! in other languages, 'a', again, is just like ==. Finally, 'as long' is the 'while' per se)
+as long duck is not a bird: (('is not' means ! in other languages, 'a', again, is just like ==. Finally, 'as long' is the 'while' per se))
 - ask_if_he_is_a_swan.
 
 howTo ask_if_he_is_a_swan:
-- duck_age += 1 (math calculations asks for math symbols, no other way around it.)
+- duck_age += 1 ((math calculations asks for math symbols, no other way around it.))
 - is duck_age > 2?
 -- duck is a swan
 - then is duck_age a 0?
@@ -199,7 +199,7 @@ Let's teach the machine how to reproduce him.
 kind Human
 inherits Animal
 
-- Human with name, surname:.(don't boilerplate. The '.' after the ':' is all you need)
+- Human with name, surname:.((don't boilerplate. The '.' after the ':' is all you need))
 ```
 If the DNA doesn't have a set of rules, it will assume all params should be assigned to their respective items.
 
@@ -211,14 +211,14 @@ This function's name is make_me.
 kind Human
 inherits Animal
 
-(this:)
+((this:))
 - Human with name, surname:
 -- make_me.
 
-(is exactly the same as:)
+((is exactly the same as:))
 - Human with name and surname:.
 
-(but you can do more stuff beyond just the ':.')
+((but you can do more stuff beyond just the ':.'))
 
 ```
 
@@ -234,6 +234,8 @@ if you're coming from any other language, it should be easier to read this. In a
 |function|howTo|
 |(|with|
 |)|.|
+|(start of a comment)| ((|
+|(end of a comment)| ))|
 |return|give|
 |pass|ignore|
 |continue|keep going|
@@ -256,6 +258,9 @@ if you're coming from any other language, it should be easier to read this. In a
 |for i in range(4,10)|from 4 to 10 do as i|
 |object|being|
 |class|kind|
+|super|genus|
+|namespace|nomenclature|
+
 
 
 
