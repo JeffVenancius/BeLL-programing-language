@@ -1,4 +1,4 @@
-# Doll - Do Lexycal Language.
+# BeLL - Be Lexycal Language.
 A fake programing language.
 
 That's a lexycal exercise, to be an actual language it would need a parser, compiler, etc...
