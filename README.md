@@ -1,7 +1,13 @@
-# BeLL - Be Lexycal Language.
+# Bell - Being Lexycal Language.
 A fake programing language.
 
 That's a lexycal exercise, to be an actual language it would need a parser, compiler, etc...
+
+If this was a programing language, it would have a mascot. As it isn't, I only have this idea of a being in a form of a bell - A jellyfish.
+<div  align="center">
+<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Carukia_barnesi_001A.jpg/1024px-Carukia_barnesi_001A.jpg width=50%/>
+</div>
+<p align="center">Carukia barnesi by Lis-ann Gershwin</p>
 
 ## Philosophy
 You are the wheelman. You do not say what to do, you do.
@@ -260,12 +266,6 @@ if you're coming from any other language, it should be easier to read this. In a
 |class|kind|
 |super|genus|
 |namespace|nomenclature|
-
-
-
-
-
-
 
 
 
