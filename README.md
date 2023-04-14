@@ -65,8 +65,17 @@ item str/[a-z]{29}/bar = "range can be defined by regex"
 item int/-?[\d]{1,2}/number = -20 ((an integer that is signed and can hold two digits.))
 remember str/OCTOBER: 'THIRD' ((remember is how you call a constant))
 
+remember str_regex: '\w*'
+item str/^str_regex/baz: "the ^ captures an item value as a regex" ((as regex is being treated as
+                                                                        a range, some chars stop making sense,
+                                                                        so they're repurposed))
+
+
 howTo a_static_function: /str
-- give "a string." ((give means return. Again, it's more human that way.))
+- get "a string." ((get means return. Again, it's more human that way.))
+
+howTo get_nothing: /void
+- get nothing
 
 ```
 ## Ooops, I've did it again.
@@ -82,7 +91,7 @@ howTo do_a_thing with foo:
 - write with value.
 
 howTo this_function str/bar: /str
-- give bar
+- get bar
 
 howTo disappear_completelly:
 - ignore
@@ -242,7 +251,7 @@ if you're coming from any other language, it should be easier to read this. In a
 |)|.|
 |(start of a comment)| ((|
 |(end of a comment)| ))|
-|return|give|
+|return|get|
 |pass|ignore|
 |continue|keep going|
 |break|cut|
