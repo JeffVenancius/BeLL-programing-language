@@ -34,14 +34,25 @@ a
 comment
 ))
 
+((
+everything that can be defined by the user needs a underscore somewhere, anywhere. 
+This is a "social" contract and it exists for two reasons: future legacy and to 
+be compatible with the nature of the language. Just assume that, even if a word without '_' 
+is not reserved, the project reserve the possibility that it could one day be.
+The compiler won't let you do everything you want, but it's for a reason: avoid headaches.
+))
+
 howTo start: ((start is the first thing a program do.))
 - write with "hello world". ((you know what this is?
-                             a comment.))
+it's still a comment, I didn't close it yet.))
 ```
+
 Use the keyword `howTo` to define a function. It makes sense, right? You're telling how to do it.
 Which `howTo` did I've called? I've called the `howTo write`. Did I've passed some argument? Yes.
 
 The keyword `with` serves this purpose. it's not very short, but it is more lexycal. How the computer knows I'm done? With a final point, of course.
+
+You can write a dot at the end of each line, but it's not necessary, the dot is only necessary if you're dealing with a function.
 
 ## You'll gonna mess the dot notation!
 
@@ -49,7 +60,7 @@ No I won't. You know why? Because you won't need it.
 Instead, all you have to do to access properties inside properties is use a `//`
 
 ```
-like//this
+_like//this.
 ```
 See? It's doable.
 
@@ -59,23 +70,20 @@ The first language I've learned was GDScript. I'll allways have a place in my he
 That is to say, you can statically type a variable, function or whatever here - if you want to.
 
 ```
-item foo: 'foo' ((item is what you call a variable here))
-item str/foo: 'foo' ((See? That's why you need two slashes when accessing properties. one slash means you're typing it.))
-item str/[a-z]{29}/bar = "range can be defined by regex"
-item int/-?[\d]{1,2}/number = -20 ((an integer that is signed and can hold two digits.))
-remember str/OCTOBER: 'THIRD' ((remember is how you call a constant))
+item _foo: 'foo' ((item is what you call a variable here))
+item str/_foo2: 'foo' ((See? That's why you need two slashes when accessing properties. one slash means you're typing it.))
+item str/[a-z]{29}/_bar = "range can be defined by regex"
+item int/-?[\d]{1,2}/_number = -20 ((an integer that is signed and can hold two digits.))
+remember str/_OCTOBER: 'THIRD' ((remember is how you call a constant))
 
-remember str_regex: '\w*'
-item str/^str_regex/baz: "the ^ captures an item value as a regex" ((as regex is being treated as
-                                                                        a range, some chars stop making sense,
-                                                                        so they're repurposed))
+remember _str_regex: '\w*'.
+item str/@_str_regex/_baz: "the at symbol captures an item value as a regex". (( if you want a @ on your regex, just use a \ before it))
 
-
-howTo a_static_function: /str
-- get "a string." ((get means return. Again, it's more human that way.))
+howTo _a_statically_typed_function: /str
+- get "a string.". ((get means return. Again, it's more human that way.)).
 
 howTo get_nothing: /void
-- get nothing
+- get nothing.
 
 ```
 ## Ooops, I've did it again.
@@ -87,14 +95,14 @@ Maybe, maybe not.
 ```
 do_a_thing with this_function with 'a string'..
 
-howTo do_a_thing with foo:
-- write with value.
+howTo do_a_thing with _foo:
+- write with _foo.
 
-howTo this_function str/bar: /str
-- get bar
+howTo this_function str/_bar: /str
+- get _bar.
 
 howTo disappear_completelly:
-- ignore
+- ignore.
 
 ```
 Yep, each `with` asks for a `.` 
@@ -107,6 +115,35 @@ You might noticed the weird identation.
 Again, it is to be more human readable. just use hyphens instead of tabs or spaces, the last hyphen should follow a space, but it's not necessary (although none of this is necessary, to be fair.)
 
 Think of it as a grocery list, and you'll gonna cook some stuff.
+
+## A Link to the past
+
+Pointers, oh boy, let's talk about them.
+
+- I won't call them pointers, I think links are more like it.
+- every parameter is immutable by default, as all arguments are passed as reference, if you want to change a argument you must prepend the parameter with the keyword "writable", like this:
+
+```
+item _foo = 'value'
+
+howTo start:
+- change_a_variable_outside_the_scope with _foo.
+- write with _foo. ((will print 'another value')).
+- copy_a_argument with _foo.
+
+howTo change_a_variable_outside_the_scope with writable _bar:
+- _bar = 'another value'.
+
+((if you want to copy the argument into the param, the keyword is "copied"
+
+howTo copy_a_argument with copied _baz
+- _baz += ' ' + _foo.
+- write with foo. (( will write 'another value' ))
+- write with _baz. (( will write 'another value another value'))
+
+```
+
+
 
 ## What if the wheel were squared?
 
@@ -131,7 +168,7 @@ duck is a bird ? write with "duck is a bird.". ?? duck is a whale ? write with "
 ((ternary multiline))
 duck is a bird
 - ? write with "duck is a bird.".
-- ?? duck is a whale
+- ?? duck is a whale.
 - ? write with "then how can they fly?".
 
 ```
@@ -140,24 +177,24 @@ duck is a bird
 A switch statement:
 
 ```
-item phrase
+item _phrase
 
 what is duck:
 - bird?
--- phrase: "duck is a bird"
-- whale?
--- phrase: "then how can they fly?"
+-- _phrase: "duck is a bird".
+- _whale?
+-- _phrase: "then how can they fly?".
 - airplane? mermaid? cat?
--- phrase: "This duck is kinda weird."
-- animal?
--- phrase is and "animal it is, but what kind?" (('is and' means concatenation, always. if you do 'item foo: 1 is and 2' you'll get 12))
--- keep going (('keep going' is like 'continue', don't need to break all the time, based on GDScript))
-- swan?
--- phrase += "A swan? That's why they bullied my boy!!"
+-- _phrase: "This duck is kinda weird.".
+- _animal?
+-- _phrase is and "animal it is, but what kind?". (('is and' means concatenation, always. if you do 'item foo: 1 is and 2' you'll get 12))
+-- keep going. (('keep going' is like 'continue', don't need to break all the time, based on GDScript))
+- _swan?
+-- _phrase += "A swan? That's why they bullied my boy!!".
 - whatever: ((whatever is a wild card))
--- phrase: "I don't know what else to do!"
+-- _phrase: "I don't know what else to do!".
 
-write with phrase.
+write with _phrase.
 
 ```
 ## Qu'est-ce que c'est? 
@@ -167,37 +204,37 @@ Talking about loops now.
 There are many ways to do a `for` loop, they're a gourmetized `while` statement, after all. Here are some I've thought:
 
 ```
-item arr: ['this', 'is', 'something']
+item _arr: ['this', 'is', 'something']
 
-do in arr//size:
+do in _arr//size:
 - write with 'this will repeat 3 times'.
 
-do in arr//size as index_number:
+do in _arr//size as _index_number:
 - write with index_number. ((0, 1, 2))
 
-do in arr as arr_value:
+do in _arr as _arr_value:
 - write with arr_value. ((arr_value will be the arr[index] each time))
 
-from 4 to 6 do as i:
-- write with i. ((4, 5, 6))
+from 4 to 6 do as _i:
+- write with _i. ((4, 5, 6))
 ```
 
 ### while I'm still here
 And this is the `while` way of doing stuff:
 
 ```
-item duck
-item duck_age: 0
+item _duck.
+item _duck_age: 0.
 
 as long duck is not a bird: (('is not' means ! in other languages, 'a', again, is just like ==. Finally, 'as long' is the 'while' per se))
 - ask_if_he_is_a_swan.
 
 howTo ask_if_he_is_a_swan:
-- duck_age += 1 ((math calculations asks for math symbols, no other way around it.))
+- duck_age += 1. ((math calculations asks for math symbols, no other way around it.))
 - is duck_age > 2?
--- duck is a swan
+-- duck is a swan.
 - then is duck_age a 0?
--- write with "he's ugly in a cute kind of way"
+-- write with "he's ugly in a cute kind of way".
 ```
 
 ## Being oriented program
@@ -211,8 +248,8 @@ Constructor is DNA, Norman is a being of kind human, his DNA is Human. Totally a
 Let's teach the machine how to reproduce him.
 
 ```
-kind Human
-inherits Animal
+kind Human.
+inherits Animal.
 
 - Human with name, surname:.((don't boilerplate. The '.' after the ':' is all you need))
 ```
@@ -223,8 +260,8 @@ If the items are not declared, it will create it as public items If you want to 
 This function's name is make_me.
 
 ```
-kind Human
-inherits Animal
+kind Human.
+inherits Animal.
 
 ((this:))
 - Human with name, surname:
