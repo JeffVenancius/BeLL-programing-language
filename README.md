@@ -24,9 +24,9 @@ Think like a human, a human computer.
 
 Or, as we say, "hello world".
 ```
-((this is a comment))
+(( this is a comment ))
 
-((
+(( 
 this
 is
 also
@@ -34,7 +34,7 @@ a
 comment
 ))
 
-((
+(( 
 everything that can be defined by the user needs a underscore somewhere, anywhere. 
 This is a "social" contract and it exists for two reasons: future legacy and to 
 be compatible with the nature of the language. Just assume that, even if a word without '_' 
@@ -42,9 +42,9 @@ is not reserved, the project reserve the possibility that it could one day be.
 The compiler won't let you do everything you want, but it's for a reason: avoid headaches.
 ))
 
-howTo start: ((start is the first thing a program do.))
-- write with "hello world". ((you know what this is?
-it's still a comment, I didn't close it yet.))
+howTo start: (( start is the first thing a program do. ))
+- write with "hello world". (( you know what this is?
+it's still a comment, I didn't close it yet. ))
 ```
 
 Use the keyword `howTo` to define a function. It makes sense, right? You're telling how to do it.
@@ -70,17 +70,17 @@ The first language I've learned was GDScript. I'll allways have a place in my he
 That is to say, you can statically type a variable, function or whatever here - if you want to.
 
 ```
-item _foo: 'foo' ((item is what you call a variable here))
-item str/_foo2: 'foo' ((See? That's why you need two slashes when accessing properties. one slash means you're typing it.))
+item _foo: 'foo' (( item is what you call a variable here ))
+item str/_foo2: 'foo' (( See? That's why you need two slashes when accessing properties. one slash means you're typing it. ))
 item str/[a-z]{29}/_bar = "range can be defined by regex"
-item int/-?[\d]{1,2}/_number = -20 ((an integer that is signed and can hold two digits.))
-remember str/_OCTOBER: 'THIRD' ((remember is how you call a constant))
+item int/-?[\d]{1,2}/_number = -20 (( an integer that is signed and can hold two digits. ))
+remember str/_OCTOBER: 'THIRD' (( remember is how you call a constant ))
 
 remember _str_regex: '\w*'.
-item str/@_str_regex/_baz: "the at symbol captures an item value as a regex". (( if you want a @ on your regex, just use a \ before it))
+item str/@_str_regex/_baz: "the at symbol captures an item value as a regex". ((  if you want a @ on your regex, just use a \ before it ))
 
 howTo _a_statically_typed_function: /str
-- get "a string.". ((get means return. Again, it's more human that way.)).
+- get "a string.". (( get means return. Again, it's more human that way. )).
 
 howTo get_nothing: /void
 - get nothing.
@@ -128,18 +128,18 @@ item _foo = 'value'
 
 howTo start:
 - change_a_variable_outside_the_scope with _foo.
-- write with _foo. ((will print 'another value')).
+- write with _foo. (( will print 'another value' )).
 - copy_a_argument with _foo.
 
 howTo change_a_variable_outside_the_scope with writable _bar:
 - _bar = 'another value'.
 
-((if you want to copy the argument into the param, the keyword is "copied"
+(( if you want to copy the argument into the param, the keyword is "copied"
 
 howTo copy_a_argument with copied _baz
 - _baz += ' ' + _foo.
-- write with foo. (( will write 'another value' ))
-- write with _baz. (( will write 'another value another value'))
+- write with foo. ((  will write 'another value' ))
+- write with _baz. ((  will write 'another value another value' ))
 
 ```
 
@@ -153,19 +153,19 @@ Yep, the bones are almost there. So let me do some stuff.
 Here are some ways to write if/else statements:
 
 ```
-((First way))
+(( First way ))
 
-is duck a bird? (('is' is equal to if, 'a' is equal to ==))
+is duck a bird? (( 'is' is equal to if, 'a' is equal to == ))
 - write with "duck is a bird.".
-then is duck a whale? (('then is' is not exactly equal to 'else', but it's the same spirit, so there you have it, 'else if'))
+then is duck a whale? (( 'then is' is not exactly equal to 'else', but it's the same spirit, so there you have it, 'else if' ))
 - write with "then how can they fly?".
-well then: (('well' is just so you can comunicate better, think of it as the machine trying to do all the paths and then say it for itself "well, I'll do this then"))
+well then: (( 'well' is just so you can comunicate better, think of it as the machine trying to do all the paths and then say it for itself "well, I'll do this then" ))
 - write "What is life?".
 
-((ternary))
+(( ternary ))
 duck is a bird ? write with "duck is a bird.". ?? duck is a whale ? write with "then how can they fly?".
 
-((ternary multiline))
+(( ternary multiline ))
 duck is a bird
 - ? write with "duck is a bird.".
 - ?? duck is a whale.
@@ -187,11 +187,11 @@ what is duck:
 - airplane? mermaid? cat?
 -- _phrase: "This duck is kinda weird.".
 - _animal?
--- _phrase is and "animal it is, but what kind?". (('is and' means concatenation, always. if you do 'item foo: 1 is and 2' you'll get 12))
--- keep going. (('keep going' is like 'continue', don't need to break all the time, based on GDScript))
+-- _phrase is and "animal it is, but what kind?". (( 'is and' means concatenation, always. if you do 'item foo: 1 is and 2' you'll get 12 ))
+-- keep going. (( 'keep going' is like 'continue', don't need to break all the time, based on GDScript ))
 - _swan?
 -- _phrase += "A swan? That's why they bullied my boy!!".
-- whatever: ((whatever is a wild card))
+- whatever: (( whatever is a wild card ))
 -- _phrase: "I don't know what else to do!".
 
 write with _phrase.
@@ -210,13 +210,13 @@ do in _arr//size:
 - write with 'this will repeat 3 times'.
 
 do in _arr//size as _index_number:
-- write with index_number. ((0, 1, 2))
+- write with index_number. (( 0, 1, 2 ))
 
 do in _arr as _arr_value:
-- write with arr_value. ((arr_value will be the arr[index] each time))
+- write with arr_value. (( arr_value will be the arr[index] each time ))
 
 from 4 to 6 do as _i:
-- write with _i. ((4, 5, 6))
+- write with _i. (( 4, 5, 6 ))
 ```
 
 ### while I'm still here
@@ -226,11 +226,11 @@ And this is the `while` way of doing stuff:
 item _duck.
 item _duck_age: 0.
 
-as long duck is not a bird: (('is not' means ! in other languages, 'a', again, is just like ==. Finally, 'as long' is the 'while' per se))
+as long duck is not a bird: (( 'is not' means ! in other languages, 'a', again, is just like ==. Finally, 'as long' is the 'while' per se ))
 - ask_if_he_is_a_swan.
 
 howTo ask_if_he_is_a_swan:
-- duck_age += 1. ((math calculations asks for math symbols, no other way around it.))
+- duck_age += 1. (( math calculations asks for math symbols, no other way around it. ))
 - is duck_age > 2?
 -- duck is a swan.
 - then is duck_age a 0?
@@ -251,7 +251,7 @@ Let's teach the machine how to reproduce him.
 kind Human.
 inherits Animal.
 
-- Human with name, surname:.((don't boilerplate. The '.' after the ':' is all you need))
+- Human with name, surname:.(( don't boilerplate. The '.' after the ':' is all you need ))
 ```
 If the DNA doesn't have a set of rules, it will assume all params should be assigned to their respective items.
 
@@ -263,14 +263,14 @@ This function's name is make_me.
 kind Human.
 inherits Animal.
 
-((this:))
+(( this: ))
 - Human with name, surname:
 -- make_me.
 
-((is exactly the same as:))
+(( is exactly the same as: ))
 - Human with name and surname:.
 
-((but you can do more stuff beyond just the ':.'))
+(( but you can do more stuff beyond just the ':.' ))
 
 ```
 
@@ -286,7 +286,7 @@ if you're coming from any other language, it should be easier to read this. In a
 |function|howTo|
 |(|with|
 |)|.|
-|(start of a comment)| ((|
+|(start of a comment)| (( |
 |(end of a comment)| ))|
 |return|get|
 |pass|ignore|
