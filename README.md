@@ -184,7 +184,7 @@ what is duck:
 -- _phrase: "duck is a bird".
 - _whale?
 -- _phrase: "then how can they fly?".
-- airplane? mermaid? cat?
+- _airplane? _mermaid? _cat?
 -- _phrase: "This duck is kinda weird.".
 - _animal?
 -- _phrase is and "animal it is, but what kind?". (( 'is and' means concatenation, always. if you do 'item foo: 1 is and 2' you'll get 12 ))
