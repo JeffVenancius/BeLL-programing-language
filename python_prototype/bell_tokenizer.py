@@ -242,9 +242,9 @@ def get_regexes(char, past_token):
 
     match char:
         case ':':
-            regexes.append('([^ -@]+[A-Za-z-_]):')
+            regexes.append('(^[^ -,\.-@])+[_A-Za-z]:') # START(any char that is not a symbol or letter except for - and _)(any letter, number, _):END
         case ')':
-            regexes.append('\({2}[\s\S]*\){2}')
+            regexes.append('\({2}[\s\S]*\){2}') # START((ANYTHING))END
         case 'i':
             regexes.append('item |inherits')
         case 'r':
@@ -253,8 +253,7 @@ def get_regexes(char, past_token):
     if past_token != '}':
         match char:
             case 'c':
-                regexes.append('create signal to ')
-                regexes.append('common knowledge ')
+                regexes.append('create signal to |common knowledge ')
             case 'f':
                 regexes.append('family ')
             case 'h':
@@ -263,20 +262,17 @@ def get_regexes(char, past_token):
                 regexes.append('kind ')
             case 'n':
                 regexes.append('name ')
-    elif:
-        match char:
-
    else:
        match char:
            case ' ':
-                regexes.append(' +(-{1,2}|\+{1,2}|>{1,2}|<{1,2}|\*{1,2}|\|{1,2}|\&{1,2}|=|%|~|\^) +')
-                regexes.append(' +(-|\+|=|>{1,2}|<{1,2}|\*{1,2}|\||\&|%|!)= +')
-                regexes.append(' +(but|and|or|by|in|with|is a|is not a|in|as) +')
-                regexes.append(' +a +')
+                regexes.append(' +(-|\+|\+-|>{1,2}|<{1,2}|\*{1,2}|\|{1,2}|\&{1,2}|=|%|~|\^|\/) +') # (space = at least 1)START - OR + OR +- OR > OR >> OR < OR << OR * OR ** OR | OR || OR & OR && OR = OR % OR ~ OR ^ OR / END
+                regexes.append(' +(--|\+\+)') # (space = at least 1)START --OR++END
+                regexes.append(' +(-|\+|=|>{1,2}|<{1,2}|\*{1,2}|\||\&|%|!|/)= +') # (space = at least 1)START -= OR += OR == OR >= OR >>= OR <= OR <<= OR *= OR **= OR |= OR &= OR %= OR != OR /= END
+                regexes.append(' +(a|but|and|or|by|in|with|is a|is not a|in|as) +') # (space = at least 1)START a OR but OR and OR or OR by OR in OR with OR is a OR is not a OR in OR as END
             case '?':
-                regexes.append('\?{1,2}')
+                regexes.append('\?{1,2}') # START?OR??END
             case '-':
-                regexes.append('-+ ')
+                regexes.append('-+ ') # (- = at least 1)START- END
             case 'a':
                 regexes.append('as long ')
             case 'c':
@@ -300,7 +296,7 @@ def get_regexes(char, past_token):
     return regexes
 
 def is_a_coment(word):
-    return check_regexes('\({2}[\s\S]*', word)
+    return check_regexes('\({2}[\s\S]*', word) # START((ANYTHINGEND
 
 def comment_is_finished(word):
     return check_regexes('[\({2}[\s\S]*\){2}]', word)
@@ -308,6 +304,11 @@ def comment_is_finished(word):
 def should_ident(previous_identation, identation):
     return previous_identation > identation:
 
+
+def bad_idented_calculation(word):
+    regexes = []
+    regexes.append('[_A-Za-z]+(-{1,2}|\+{1,2}|\+-|>{1,2}|<{1,2}|\*{1,2}|\|{1,2}|\&{1,2}|=|%|~|\^|\/)') # START-OR+OR+-OR>OR>>OR<OR<<OR*OR**OR|OR||OR&OR&&OR=OR%OR~OR^OR/END
+    return check_regexes(regexes, word()
 
 def tokenize(source):
     file = open(source, 'r')
@@ -334,9 +335,9 @@ def tokenize(source):
                 continue
 
             regexes = get_regexes(word[0], tokens[-1])
-            checked = check_regexes(regexes, word) 
+            valid_regex = check_regexes(regexes, word) 
 
-            if checked:
+            if valid_regex:
                 if word[0] == '-':
                     identation = word.count('-')
                     if should_ident(previous_identation, identation):
@@ -345,10 +346,13 @@ def tokenize(source):
                     previous_identation = identation
                     continue
 
-                if word.count(' '): # has
+                if ' ' in word:
                     tokens.append(word.replace(' ', ''))
                     tokens.append(' ')
                 else:
+                    if bad_idented_calculation(word):
+                         tokens.append(word)
+                        pass
                     tokens.append(word)
             else:
                 regexes = get_regexes(word[-1], tokens[-1])
