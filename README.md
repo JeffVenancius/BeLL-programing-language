@@ -42,13 +42,13 @@ is not reserved, the project reserve the possibility that it could one day be.
 The compiler won't let you do everything you want, but it's for a reason: avoid headaches.
 ))
 
-howTo start: (( start is the first thing a program do. ))
+How to start: (( start is the first thing a program do. ))
 - write with "hello world". (( you know what this is?
 it's still a comment, I didn't close it yet. ))
 ```
 
-Use the keyword `howTo` to define a function. It makes sense, right? You're telling how to do it.
-Which `howTo` did I've called? I've called the `howTo write`. Did I've passed some argument? Yes.
+Use the keyword `How to` to define a function. It makes sense, right? You're telling how to do it.
+Which `How to` did I've called? I've called the `How to` `write`. Did I've passed some argument? Yes.
 
 The keyword `with` serves this purpose. it's not very short, but it is more lexycal. How the computer knows I'm done? With a final point, of course.
 
@@ -72,17 +72,22 @@ That is to say, you can statically type a variable, function or whatever here - 
 ```
 item _foo: 'foo' (( item is what you call a variable here ))
 item str/_foo2: 'foo' (( See? That's why you need two slashes when accessing properties. one slash means you're typing it. ))
-item str/[a-z]{29}/_bar = "range can be defined by regex"
-item int/-?[\d]{1,2}/_number = -20 (( an integer that is signed and can hold two digits. ))
+
+item str/1,4/_bar: "four" ((You can define the range by putting another slash between the item's name))
+item str/\\[a-z]{40}/_bar2 = "you can also define the range with regex" (( by prepending it with "\\" ))
+
+item int/-?[\d]{1,2}/_number = -20 (( an integer that is signed and can hold only two digits. ))
 remember str/_OCTOBER: 'THIRD' (( remember is how you call a constant ))
 
 remember _str_regex: '\w*'.
 item str/@_str_regex/_baz: "the at symbol captures an item value as a regex". ((  if you want a @ on your regex, just use a \ before it ))
 
-howTo _a_statically_typed_function: /str
+(( and you can of course define your own types in a OOP way, which I'll talke about later ))
+
+How to _a_statically_typed_function: /str
 - get "a string.". (( get means return. Again, it's more human that way. )).
 
-howTo get_nothing: /void
+How to get_nothing: /void
 - get nothing.
 
 ```
@@ -95,13 +100,13 @@ Maybe, maybe not.
 ```
 do_a_thing with this_function with 'a string'..
 
-howTo do_a_thing with _foo:
+How to do_a_thing with _foo:
 - write with _foo.
 
-howTo this_function str/_bar: /str
+How to this_function str/_bar: /str
 - get _bar.
 
-howTo disappear_completelly:
+How to disappear_completelly:
 - ignore.
 
 ```
@@ -126,17 +131,17 @@ Pointers, oh boy, let's talk about them.
 ```
 item _foo = 'value'
 
-howTo start:
+How to start:
 - change_a_variable_outside_the_scope with _foo.
 - write with _foo. (( will print 'another value' )).
 - copy_a_argument with _foo.
 
-howTo change_a_variable_outside_the_scope with writable _bar:
+How to change_a_variable_outside_the_scope with writable _bar:
 - _bar = 'another value'.
 
 (( if you want to copy the argument into the param, the keyword is "copied"
 
-howTo copy_a_argument with copied _baz
+How to copy_a_argument with copied _baz
 - _baz += ' ' + _foo.
 - write with foo. ((  will write 'another value' ))
 - write with _baz. ((  will write 'another value another value' ))
@@ -229,7 +234,7 @@ item _duck_age: 0.
 as long duck is not a bird: (( 'is not' means ! in other languages, 'a', again, is just like ==. Finally, 'as long' is the 'while' per se ))
 - ask_if_he_is_a_swan.
 
-howTo ask_if_he_is_a_swan:
+How to ask_if_he_is_a_swan:
 - duck_age += 1. (( math calculations asks for math symbols, no other way around it. ))
 - is duck_age > 2?
 -- duck is a swan.
@@ -283,7 +288,7 @@ if you're coming from any other language, it should be easier to read this. In a
 
 |standard|substitution 1|
 |---|---|
-|function|howTo|
+|function|How to|
 |(|with|
 |)|.|
 |(start of a comment)| (( |
@@ -322,7 +327,7 @@ if you're coming from any other language, it should be easier to read this. In a
 
 |Instead of|use this|or this|
 |---|---|---|
-|function|howTo
+|function|How to
 |if|is|?|
 |else if|then is|??|
 |else|then|...|
@@ -341,7 +346,7 @@ if you're coming from any other language, it should be easier to read this. In a
 
 ## About "use this"
 
-- howTo - When you define a function, you're actually giving instructions, when you call a function, you ask the computer to follow them.
+- How to - When you define a function, you're actually giving instructions, when you call a function, you ask the computer to follow them.
 - is - Think of yourself as the computer instead of the master, sometimes it makes more sense to think in the first person.
 - then is - Same idea.
 - do in - Giving priority to action here.
@@ -358,7 +363,7 @@ if you're coming from any other language, it should be easier to read this. In a
 
 ## Typing
 
-This language is dinamically typed with optional static typing but, if you gonna static type your "items" and "howTos", you better do it all the way: with ranges.
+This language is dinamically typed with optional static typing but, if you gonna static type your "items" and "How tos", you better do it all the way: with ranges.
 
 Let's declare a item:
 ```
