@@ -1,24 +1,20 @@
-# Bell - Being Lexycal Language.
-A fake programing language.
+# Cell - Cell evolutionary lexical language.
+A fake programing language based on biological paradigms.
 
 That's a lexycal exercise, to be an actual language it would need a parser, compiler, etc...
 
-If this was a programing language, it would have a mascot. As it isn't, I only have this idea of a being in a form of a bell - A jellyfish.
-<div  align="center">
-<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Carukia_barnesi_001A.jpg/1024px-Carukia_barnesi_001A.jpg width=50%/>
-</div>
-<p align="center">Carukia barnesi by Lis-ann Gershwin</p>
+The end goal - if any at all - is to be like Nim.
+
+You write like a human and it transalates it into C++ - The language of the aliens, also known as programers.
 
 ## Philosophy
-You are the wheelman. You do not say what to do, you do.
+You do not do, you are.
 
-You are the computer, take the passive aproach and prioritize an active one.
-
-This is a language, it comunicates with the most human readable aproach I can get.
-
-If you can comunicate better, than you can think better as well.
+Take the passive aproach and prioritize an active one.
 
 Think like a human, a human computer.
+
+Is that a gun inside your belly or are you just happy to see me?
 
 ## Do a barrel roll
 
@@ -42,9 +38,8 @@ is not reserved, the project reserve the possibility that it could one day be.
 The compiler won't let you do everything you want, but it's for a reason: avoid headaches.
 ))
 
-How to start: (( start is the first thing a program do. ))
-- write with "hello world". (( you know what this is?
-it's still a comment, I didn't close it yet. ))
+How to cry: (( The first thing any human being do, as they should - The entry point ))
+- write with "hello world".
 ```
 
 Use the keyword `How to` to define a function. It makes sense, right? You're telling how to do it.
