@@ -278,6 +278,21 @@ This is not done yet, but maybe you've noticed it turns out to be very funny to 
 
 Now you can check a table with the substitutions I've made/am making.
 
+## Do not sin
+
+auto in c++ is considered bad practice - and I agree.
+
+The only reason people seem to accept it is so they don't have to write a very long type.
+
+Well, if you have a really large name, what will people call you? A nickname, of course.
+
+Nicknames will not only shorten the typing, it will also let you have a track to what it actually means - something you pretty much can't do with auto.
+
+```
+nickname int_vec_iterator: std::vector<int>::iterator
+```
+
+
 ## The Table
 if you're coming from any other language, it should be easier to read this. In a world where this language actually exists and is entirely functional, you won't need to.
 
@@ -311,7 +326,7 @@ if you're coming from any other language, it should be easier to read this. In a
 |object|being|
 |class|kind|
 |super|genus|
-|namespace|nomenclature|
+|namespace|surname|
 
 
 
