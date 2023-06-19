@@ -75,11 +75,12 @@ That is to say:
 ```
 ;; 
 Some points while we are at it:
-- This language has a lot of good pratices and I strongly recomend that you follow them.
-Not gonna hold you back, tough.
--- everything that can be defined by the user should have a underscore somewhere, anywhere. There are two reasons why:
-   future legacy and to be compatible with the nature of the language. Just assume that, even if a word without '_' 
-   is not reserved, the project reserve the possibility that it could one day be.
+- This language has a lot of good pratices and I strongly recomend that
+  you follow them. Not gonna hold you back, tough.
+-- everything that can be defined by the user should have a underscore
+   somewhere, anywhere. There are two reasons why:
+     future legacy and to be compatible with the nature of the language. Just assume that, even if a word without '_' 
+     is not reserved, the project reserve the possibility that it could one day be.
 - gene is the keyword for variable.
 - GENE is the keyword for const (think of it as a dominant gene, thus, uppercase).
 - There's no single line comments.
@@ -113,19 +114,16 @@ Rule of thumb: If you're dealing with pointers, use v\\ when dealing with the va
 Want to know the type of a variable?
 ```
 type\\foo
-;;
-or
-;;
+;; or ;;
 t\\foo    
 ```
 
 Want to cast a variable to a type?
 ```
 t-int with 1.4 + 2.7.
-;;
-or
-;;
+;; or ;;
 type-int(1.4 + 2.7)
+;; etc... ;;
 ```
 <!--
 The keyword `with` serves this purpose. it's not very short, but it is more lexycal. How the computer knows I'm done? With a final point, of course.
