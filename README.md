@@ -28,13 +28,23 @@ How to live:
 Use the keyword `How to` to define a function. It makes sense, right? You're telling how to do it.
 Which `How to` did I've called? I've called the `How to` `write`. Did I've passed some argument? Yes.
 
-In this language you can avoid parenthesis by using the "with" keyword and a final dot at the end.
+In this language you can avoid parenthesis by using the "with" keyword and a dot in the end of each.
 Can I use parenthesis? Yes.
 Should I? It depends.
 
 My advice is to be concise.
 If you write in english, you will think and read in english, if you write in math, you will think and read in math.
 Doing math? Parenthesis, else: write as you talk.
+
+live is the entry point, notice that this language is indented-based but with a twist: 
+
+You don't use tabs, you almost don't use spaces, you use '-' and when you're ready, ' '.
+
+\- block of code
+
+\-- block inside block of code
+
+The reason? Readability, why should IDEs tell you stuff that the language itself could actually tell?
 
 ## What is a variable? A miserable pile of concepts
 But, for real, what IS a variable? They say it's a container, but what IS a container?
@@ -72,6 +82,8 @@ Not gonna hold you back, tough.
    is not reserved, the project reserve the possibility that it could one day be.
 - gene is the keyword for variable.
 - GENE is the keyword for const (think of it as a dominant gene, thus, uppercase).
+- There's no single line comments.
+- That was a comment, by the way.
 ;;
 
 gene str\\_foo: "text" 
@@ -100,22 +112,20 @@ Rule of thumb: If you're dealing with pointers, use v\\ when dealing with the va
 
 Want to know the type of a variable?
 ```
-type\\foo ;; or ;;
-t\\foo    ;; this is a comment by the way ;;
-
-;; Yes, there's
-no single line
-comments here. ;;
-
+type\\foo
+;;
+or
+;;
+t\\foo    
 ```
 
 Want to cast a variable to a type?
 ```
-t-int with 1.4 + 2.7. ;; or ;;
-type-int with 1.4 + 2.7. ;; or ;;
-t-int(1.4 + 2.7)
-
-
+t-int with 1.4 + 2.7.
+;;
+or
+;;
+type-int(1.4 + 2.7)
 ```
 <!--
 The keyword `with` serves this purpose. it's not very short, but it is more lexycal. How the computer knows I'm done? With a final point, of course.
