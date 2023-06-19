@@ -65,6 +65,32 @@ No, it's just good practice to allways know what you're dealing with.
 
 Rule of thumb: If you're dealing with pointers, use v\\ when dealing with the value.
 
+Want to know the type of a variable?
+```
+type\\foo ;; or ;;
+t\\foo    ;; this is a comment by the way ;;
+
+;; Yes, there's
+no single line
+comments here. ;;
+
+```
+
+Want to cast a variable to a type?
+```
+t-int with 1.4 + 2.7. ;; or ;;
+type-int with 1.4 + 2.7. ;; or ;;
+t-int(1.4 + 2.7)
+
+;;
+Notice that you can avoid parenthesis by using the "with" keyword and a final dot at the end. That's pretty lexycal, in my opinion.
+Can I use parenthesis? Yes.
+Should I? It depends.
+;;
+
+```
+
+
 <!--
 ## Do a barrel roll
 
