@@ -9,7 +9,6 @@ You write like a human and it transalates it into C++ - The language of the alie
 
 I'm remaking this one. Once it was called bell, you can look into it by reading through past commits.
 
-
 ## Philosophy
 You do not do, you are.
 
@@ -20,14 +19,34 @@ Think like a human, a human computer.
 Is that a gun inside your belly or are you just happy to see me?
 
 
+## Do a barrel roll
+Or, as we say, "hello world".
+```
+How to live:
+- write with "hello world".
+```
+Use the keyword `How to` to define a function. It makes sense, right? You're telling how to do it.
+Which `How to` did I've called? I've called the `How to` `write`. Did I've passed some argument? Yes.
+
+In this language you can avoid parenthesis by using the "with" keyword and a final dot at the end.
+Can I use parenthesis? Yes.
+Should I? It depends.
+
+My advice is to be concise.
+If you write in english, you will think and read in english, if you write in math, you will think and read in math.
+Doing math? Parenthesis, else: write as you talk.
+
 ## What is a variable? A miserable pile of concepts
 But, for real, what IS a variable? They say it's a container, but what IS a container?
-A container it's something that holds, it has a shape, a range and a specialization.
+A container it's something that holds something. It has a shape, a range, a specialization.
+A bottle should hold liquids. a basket should hold solids, etc...
 
 If you create a variable with a name, let's say, foo, you ask for it later, what are you asking for? You need to define the container, right?
-So, when you call foo, you call the value that it's inside a container with the name foo.
+So, when you call foo, you call the value that's inside a container with the name foo.
 
-You're not calling a string container that holds a string, you're calling by it's name. You know what the conteiner holds because you've defined what it should hold - on a basic level, that is.
+You're not calling a string container that holds a string, you're calling a name that refers to this same container. 
+
+You know what the container holds because you've defined what it should hold - on a basic level, that is.
 
 If you call someone by it's name, you're not calling the whole, you just abreviating by calling a middle point - a name.
 
@@ -39,25 +58,39 @@ You can call a function, but it's counterproductive, the variable should know wh
 That is to say, if you want the address of a variable, why not be more lexycal with it? 
 And since we are talking about pointers now, why not call them links?
 
-If you want to access the constitution of a variable, and not what it holds, you just should be able to say so.
+If you want to access the constitution of a variable, and not what it holds, you should be able to say so.
 
-That is to finally say that you should be able to do something like this:
+That is to say:
 
 ```
-item str\\foo = "text"
-item link_to_foo = link\\foo
-value\\link_to_foo = "text is changed"
+;; 
+Some points while we are at it:
+- This language has a lot of good pratices and I strongly recomend that you follow them.
+Not gonna hold you back, tough.
+-- everything that can be defined by the user should have a underscore somewhere, anywhere. There are two reasons why:
+   future legacy and to be compatible with the nature of the language. Just assume that, even if a word without '_' 
+   is not reserved, the project reserve the possibility that it could one day be.
+- gene is the keyword for variable.
+- GENE is the keyword for const (think of it as a dominant gene, thus, uppercase).
+;;
+
+gene str\\_foo: "text" 
+gene link_to_foo: link\\foo
+value\\link_to_foo: "text is changed"
 ```
-Or, if you want to be precise but still sucint:
+Or, if you want to be precise but still succint:
 ```
-item str\\foo = "text"
-item link_to_foo = l\\foo
+gene str\\foo = "text"
+gene link_to_foo = l\\foo
 v\\link_to_foo = "text is changed"
 ```
+
 Now, how do we access properties in the value? With two forward slashes, of course.
 Backslashes for conteiner properties, forwardslashes for properties inside.
 
 Makes sense?
+
+As a biological thinking, you can think of the value as the nucleus of a cell.
 
 Do I need to prepend variables that are pointers with v\\?
 
@@ -82,45 +115,9 @@ t-int with 1.4 + 2.7. ;; or ;;
 type-int with 1.4 + 2.7. ;; or ;;
 t-int(1.4 + 2.7)
 
-;;
-Notice that you can avoid parenthesis by using the "with" keyword and a final dot at the end. That's pretty lexycal, in my opinion.
-Can I use parenthesis? Yes.
-Should I? It depends.
-;;
 
 ```
-
-
 <!--
-## Do a barrel roll
-
-Or, as we say, "hello world".
-```
-(( this is a comment ))
-
-(( 
-this
-is
-also
-a
-comment
-))
-
-(( 
-everything that can be defined by the user needs a underscore somewhere, anywhere. 
-This is a "social" contract and it exists for two reasons: future legacy and to 
-be compatible with the nature of the language. Just assume that, even if a word without '_' 
-is not reserved, the project reserve the possibility that it could one day be.
-The compiler won't let you do everything you want, but it's for a reason: avoid headaches.
-))
-
-How to cry: (( The first thing any human being do, as they should - The entry point ))
-- write with "hello world".
-```
-
-Use the keyword `How to` to define a function. It makes sense, right? You're telling how to do it.
-Which `How to` did I've called? I've called the `How to` `write`. Did I've passed some argument? Yes.
-
 The keyword `with` serves this purpose. it's not very short, but it is more lexycal. How the computer knows I'm done? With a final point, of course.
 
 You can write a dot at the end of each line, but it's not necessary, the dot is only necessary if you're dealing with a function.
