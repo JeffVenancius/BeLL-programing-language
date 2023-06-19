@@ -7,6 +7,9 @@ The end goal - if any at all - is to be like Nim.
 
 You write like a human and it transalates it into C++ - The language of the aliens, also known as programers.
 
+I'm remaking this one. Once it was called bell, you can look into it by reading through past commits.
+
+
 ## Philosophy
 You do not do, you are.
 
@@ -16,6 +19,53 @@ Think like a human, a human computer.
 
 Is that a gun inside your belly or are you just happy to see me?
 
+
+## What is a variable? A miserable pile of concepts
+But, for real, what IS a variable? They say it's a container, but what IS a container?
+A container it's something that holds, it has a shape, a range and a specialization.
+
+If you create a variable with a name, let's say, foo, you ask for it later, what are you asking for? You need to define the container, right?
+So, when you call foo, you call the value that it's inside a container with the name foo.
+
+You're not calling a string container that holds a string, you're calling by it's name. You know what the conteiner holds because you've defined what it should hold - on a basic level, that is.
+
+If you call someone by it's name, you're not calling the whole, you just abreviating by calling a middle point - a name.
+
+In this sense, why can't we access a variable property backwards?
+And how?
+
+You can call a function, but it's counterproductive, the variable should know what is made of, so by changing the way you ask, you should be able to get exactly what you want from it.
+
+That is to say, if you want the address of a variable, why not be more lexycal with it? 
+And since we are talking about pointers now, why not call them links?
+
+If you want to access the constitution of a variable, and not what it holds, you just should be able to say so.
+
+That is to finally say that you should be able to do something like this:
+
+```
+item str\\foo = "text"
+item link_to_foo = link\\foo
+value\\link_to_foo = "text is changed"
+```
+Or, if you want to be precise but still sucint:
+```
+item str\\foo = "text"
+item link_to_foo = l\\foo
+v\\link_to_foo = "text is changed"
+```
+Now, how do we access properties in the value? With two forward slashes, of course.
+Backslashes for conteiner properties, forwardslashes for properties inside.
+
+Makes sense?
+
+Do I need to prepend variables that are pointers with v\\?
+
+No, it's just good practice to allways know what you're dealing with.
+
+Rule of thumb: If you're dealing with pointers, use v\\ when dealing with the value.
+
+<!--
 ## Do a barrel roll
 
 Or, as we say, "hello world".
