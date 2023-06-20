@@ -81,8 +81,18 @@ Some points while we are at it:
    somewhere, anywhere. There are two reasons why:
      future legacy and to be compatible with the nature of the language. Just assume that, even if a word without '_' 
      is not reserved, the project reserve the possibility that it could one day be.
+-- The assignment operator can be either a colon or a equal sign, though it makes sense to use a equal sign for math
+   related expressions and the colon for anything else.
+-- If you are concise with the language and try to follow english rules you should be able to go. The pro of doing
+   this is that later you will know where you are and where you should go just by following logic, instead of having
+   to remember it.
+
 - gene is the keyword for variable.
 - GENE is the keyword for const (think of it as a dominant gene, thus, uppercase).
+
+- you can declare multiple variables and even assign them to the same value on a single line, like this:
+-- gene int\\foo2, bar2, baz2 = 2
+
 - There's no single line comments.
 - That was a comment, by the way.
 ;;
@@ -93,10 +103,11 @@ value\\link_to_foo: "text is changed"
 ```
 Or, if you want to be precise but still succint:
 ```
-gene str\\foo = "text"
-gene link_to_foo = l\\foo
-v\\link_to_foo = "text is changed"
+gene str\\foo: "text"
+gene link_to_foo: l\\foo
+v\\link_to_foo: "text is changed"
 ```
+
 
 Now, how do we access properties in the value? With two forward slashes, of course.
 Backslashes for conteiner properties, forwardslashes for properties inside.
