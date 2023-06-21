@@ -135,8 +135,18 @@ t-int with 1.4 + 2.7.
 ;; or ;;
 type-int(1.4 + 2.7)
 ;; etc... ;;
+
 ```
 <!--
+
+P.Ss------------
+# Type
+future == void*
+
+
+
+
+
 The keyword `with` serves this purpose. it's not very short, but it is more lexycal. How the computer knows I'm done? With a final point, of course.
 
 You can write a dot at the end of each line, but it's not necessary, the dot is only necessary if you're dealing with a function.
